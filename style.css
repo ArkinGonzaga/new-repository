@@ -125,7 +125,7 @@ nav {
 }
 
 .dropdown {
-    display: flex; /* Ensure it uses flex for layout */
+    display: none; /* Ensure it uses flex for layout */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -372,7 +372,7 @@ h2 span {
 section {
     width: 100%;
     min-height: 100vh;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -991,7 +991,55 @@ p {
 
 
 
-/* For small devices (320px and up) */
+/* Smaller screen: 375px and below */
+@media (max-width: 375px) {
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .nav-container .links a {
+        font-size: 5px; /* Further reduce font size for 375px */
+        padding: 2px 1px; /* Smaller padding */
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    /* Adjust images and content for a smaller screen */
+    .profile-image img {
+        width: 70%;
+        max-width: 300px;
+    }
+
+    .content h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Extra small screen: 320px and below */
+@media (max-width: 320px) {
+    .nav-container .links a {
+        font-size: 10px; /* Make links even smaller */
+        padding: 3px 5px; /* Very small padding */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .profile-image img {
+        width: 60%;
+        max-width: 250px;
+    }
+
+    .content h1 {
+        font-size: 1.1rem;
+    }
+}
+
 @media (max-width: 425px) {
     body {
         overflow-x: hidden;
@@ -999,52 +1047,61 @@ p {
     }
 
     nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #052d24;
-        padding: 10px 15px;
+        justify-content: center; /* Center the navigation container */
+        align-items: center; /* Vertically center elements */
+        width: 100%;
+        background-color: #052d24; /* Match the overall theme */
+        padding: 10px;
+    }
+
+    
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        padding: 10px 15px; /* Reduce padding */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Smaller logo for mobile */
+    }
+
+    /* Make links smaller */
+    .nav-container .links a {
+        font-size: 12px; /* Reduce font size */
+        padding: 5px 8px; /* Smaller padding */
+        color: white;
+    }
+
+    .nav-container .links a:hover {
+        background-color: rgb(248, 248, 248);
+        color: #052d24;
     }
 
     .hamburg {
-        display: flex;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
+        display: none; /* Show hamburger menu */
     }
 
-    .links {
-        display: block; /* Hide normal navigation */
+    .nav-container .links {
+        display: block; /* Hide links by default */
     }
 
-    .dropdown {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .dropdown.open {
-        transform: translateX(0);
-    }
-
+    /* Dropdown adjustments */
     .dropdown .links a {
-        font-size: 1.2rem;
-        color: white;
-        padding: 10px;
+        font-size: 14px; /* Smaller font size */
+        padding: 6px 12px; /* Adjust padding */
     }
+
+    /* Ensure the dropdown takes up the full screen width */
+    .dropdown.open {
+        transform: translateY(0);
+    }
+
+    .dropdown .links {
+        gap: 15px; /* Smaller gap between items */
+    }
+
+  
 
     #home {
         display: flex;
@@ -1054,18 +1111,135 @@ p {
         text-align: center;
         padding: 20px;
     }
-
-    #home h1 {
-        font-size: clamp(1.3rem, 2.5vw, 2rem);
+    .main-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+        width: 100%; /* Ensure it takes up full width */
     }
 
-    #home p {
-        font-size: clamp(1rem, 2vw, 1.2rem);
+    /* Adjust image */
+    .main-container .image {
+        width: 100%; /* Ensure image takes full width */
+    }
+
+    .main-container .image img {
+        width: 100%;
+        height: auto; /* Remove max-height to keep aspect ratio intact */
+    }
+
+    /* Content adjustments */
+    .main-container .content {
+        width: 100%;
+        text-align: center; /* Center the text */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Heading adjustments */
+    .content h1 {
+        font-size: 1.5rem; /* Smaller font size */
+        line-height: 1.2;
+        margin-bottom: 0px;
+    }
+    #home h1 {
+        font-size: 18rem; /* Set a smaller font size */
+        margin-top: 0; /* Remove top margin */
+        margin-bottom: 10px; /* Optional: Adjust bottom margin */
+        padding: 0; /* Remove padding if any */
+    }
+    /* H2 (name) size adjustment */
+    h2 span {
+        font-size: 2.5rem; /* Adjusted font size */
+        letter-spacing: 1px;
+        margin-top: 0; /* Remove top margin */
+        margin-bottom: 5px; /* Reduced bottom margin */
+        padding: 0; /* Remove padding */
+    }
+
+    /* Typewriter text adjustments */
+    .typewriter {
+        font-size: 1.2rem; /* Smaller font size */
+        margin-top: -30px;
+        margin-bottom: 15px;
+    }
+
+    .typewriter span {
+        font-size: 12px; 
+        margin-top: 0; /* Remove top margin */
+        margin-bottom: 10px; /* Reduced bottom margin */
+        padding: 0;
+    }
+
+    /* Social links styling */
+    .social-links {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* Smaller gap between icons */
+    }
+
+    .social-links i {
+        font-size: 1.5rem; /* Smaller social media icons */
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    /* Button adjustments */
+    .content button {
+        width: 90%; /* Make button wider on mobile */
+        padding: 12px 0;
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .btn button {
+        width: 140px; /* Make button smaller */
+        height: 45px;
+        font-size: 1rem; /* Smaller button text */
+    }
+
+    /* Home section adjustments */
+    #home {
+        height: auto; /* Remove fixed height */
+        margin-top: 0;
+        padding: 0 15px; /* Add some padding for mobile */
+        margin-bottom: 50px; /* Space for scrolling */
+    }
+
+    /* Ensure sections are centered and content is responsive */
+    section {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px; /* Adjust padding */
+        overflow-y: auto;
+        scroll-margin-top: 10vh;
+    }
+
+    /* Adjust any additional padding or margins */
+    .arrow {
+        margin-left: 5px; /* Reduce gap for arrows */
+    }
+
+    /* Make sure social links do not overflow */
+    .social-links i {
+        font-size: 1.2rem; /* Further reduce social link icon size */
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .btn button {
         width: 80%;
         font-size: -0.8rem;
+    }
+    .profile-image img {
+        width: 80%;  /* Increase width to 80% of the container */
+        max-width: 350px;  /* Limit max width to 350px */
+        height: auto;  /* Maintain aspect ratio */
+        border-radius: 50%;  /* Circular image */
+        object-fit: cover;   /* Make sure the image fits nicely */
+        margin-top: 300px;  /* Add space on top */
     }
 
     .hobbies-container {
@@ -1097,7 +1271,7 @@ p {
     }
     
     .skills-heading {
-        margin-top: 400px;
+        margin-top: 300px;
         font-size: 3rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -1136,7 +1310,7 @@ p {
     }
     
     #contact {
-        padding: 30px 15px; /* Reduce padding for smaller screens */
+        padding: 0px 15px; /* Reduce padding for smaller screens */
         max-height: 100vh; /* Ensure it's still scrollable */
         overflow-y: auto; /* Enable vertical scroll */
     }
@@ -1385,10 +1559,18 @@ p {
         height: 2px;
         margin: 20px 0;
     }
-
+    .skills-heading {
+        margin-top: 20px;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        color: white;
+        font-family: 'Playfair Display', serif; /* Replace Audrey with Playfair */
+    }
     /* Navbar for mobile */
     .hamburg {
-        display: block;
+        display: none !important;
         position: absolute;
         top: 25px;
         right: 45px;
@@ -1438,5 +1620,60 @@ p {
 
     .popup-content img {
         max-height: 40vh;
+    }
+    .links {
+        display: none;
+    }
+
+    /* Show hamburger menu in mobile */
+    .hamburg {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Show dropdown when open */
+    .dropdown {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .dropdown.open {
+        display: flex; /* Show the dropdown when active */
+    }
+
+    .cancel {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+    .dropdown .links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dropdown .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+
+    .dropdown .links a:hover {
+        color: #007bff;
     }
 }
