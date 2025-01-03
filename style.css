@@ -1079,13 +1079,32 @@ p {
         width: 100%;
         height: auto;
     }
-    
     .hobby p {
-        text-align: center;
-        font-size: 0.9rem;
-        margin-top: 5px;
+        position: absolute;
+        top: 0; /* Start from the top of the image */
+        left: 0; /* Align to the left of the image */
+        width: 100%; /* Make the background cover the entire width */
+        height: 100%; /* Make the background cover the entire height of the image */
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        color: #ffffff;
+        display: flex; /* Use flexbox to center the text */
+        justify-content: center; /* Horizontally center the text */
+        align-items: center; /* Vertically center the text */
+        font-size: 1rem;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
-
+    
+    .skills-heading {
+        margin-top: 400px;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        color: white;
+        font-family: 'Playfair Display', serif; /* Replace Audrey with Playfair */
+    }
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -1105,21 +1124,78 @@ p {
     .project-card {
         font-size: 0.9rem;
     }
+    #projects h2 {
+        font-family: 'Playfair Display', serif; /* Replace Audrey with Playfair */
+        color: #ffffff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin-bottom: 40px;
+        text-align: center; /* Ensure the title is centered */
+        margin-top: 300px; /* Removes any extra margin above */
+    }
+    
+    #contact {
+        padding: 30px 15px; /* Reduce padding for smaller screens */
+        max-height: 100vh; /* Ensure it's still scrollable */
+        overflow-y: auto; /* Enable vertical scroll */
+    }
+    .contact-form {
+        width: 100%; /* Make the form container full-width on mobile */
+        min-height: 00px; /* Set a minimum height for the mobile form */
+        padding: 20px; /* Add some padding inside */
+    }
+    .contact-container {
+        padding: 20px;
+        margin-top: 500px;
+    }
+
+    /* Target only h2 inside #contact */
+    #contact h2 {
+        font-size: 1.8rem; /* Make the title font size smaller */
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+
+    /* Target only p inside #contact */
+    #contact p {
+        font-size: 1rem; /* Make the paragraph text smaller */
+        margin-bottom: 20px;
+    }
+
+    .contact-content {
+        flex-direction: column; /* Stack the contact info and form vertically */
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%; /* Make both contact info and form full width on mobile */
+    }
+
+    .contact-item {
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px;
+    }
+
+    .contact-item i {
+        font-size: 2rem; /* Adjust icon size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem; /* Smaller input font size */
+    }
+
+    .contact-form button {
+        padding: 12px 25px; /* Smaller button padding */
+        font-size: 0.9rem; /* Smaller button text */
+    }
 }
 
 
-/* Adjustments for Larger Mobile Devices */
-@media (min-width: 426px) and (max-width: 768px) {
-    .hobbies-container,
-    .skills-grid,
-    .projects-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    #home h1 {
-        font-size: clamp(2rem, 3vw, 2.5rem);
-    }
-}
 
 
 @media (max-width: 768px) {
