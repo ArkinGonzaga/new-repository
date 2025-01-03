@@ -9,6 +9,17 @@ function cancel() {
     const navbar = document.querySelector(".dropdown");
     navbar.classList.remove("open"); // Ensure menu closes
 }
+
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        // Add any specific JavaScript adjustments for resizing here
+        console.log('Resize adjustments complete');
+    }, 250);
+});
+
 // This function will ensure the navbar is always visible after exiting fullscreen or resizing
 function ensureNavbarVisible() {
     const navbar = document.getElementById('navbar');
@@ -32,6 +43,7 @@ function hamburg() {
     const navbar = document.querySelector(".dropdown");
     navbar.classList.add("active");
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     const hamburgerIcon = document.querySelector(".hamburg");
     const dropdownMenu = document.querySelector(".dropdown");
