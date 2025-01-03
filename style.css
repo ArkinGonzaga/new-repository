@@ -8,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
 html, body {
     height: 100%; /* Make sure the body takes up the full viewport */
     margin: 0; /* Remove default margin */
@@ -24,7 +23,6 @@ body {
     overflow: hidden;
     background-color: #052d24;
 }
-
 
 /* Ensure navigation bar is always visible */
 nav {
@@ -350,61 +348,24 @@ h2 span {
 }
 
 #home {
-    height: 100vh; /* Full viewport height */
+    height: 123vh; /* Full viewport height */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
-    padding: 0 20px;
+    overflow: hidden; /* Prevents extra scrollbars */
+    padding: 0;
     margin: 0;
-    background-color: #052d24; /* Consistent background */
+    margin-top: -60px;
+    margin-bottom: 100px;
+    
+    
+    
 }
-
 #home h1 {
-    font-size: clamp(2rem, 5vw, 4rem); /* Dynamically resize */
-    line-height: 1.2;
+    margin-bottom: 0%;
+    margin-top: 0px;
     color: #ffffff;
-    margin-bottom: 20px; /* Space below heading */
-}
-
-#home p {
-    font-size: clamp(1.2rem, 4vw, 2rem); /* Adjust paragraph size */
-    color: #bbb4b4;
-    margin-bottom: 20px;
-    max-width: 90%; /* Ensure text fits within viewport */
-}
-
-
-#home .typewriter span {
-    font-size: clamp(1rem, 3vw, 1.5rem); /* Responsive typewriter text */
-    color: #ffffff;
-    font-weight: 500;
-    margin-top: 10px;
-}
-
-#home .btn {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#home .btn button {
-    font-size: clamp(1rem, 3vw, 1.5rem); /* Button text scales */
-    padding: 10px 20px;
-    width: clamp(120px, 30%, 200px); /* Dynamic button width */
-    border-radius: 5px;
-    background-color: rgb(101, 202, 126);
-    color: #000;
-    font-weight: 600;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#home .btn button:hover {
-    background-color: #1b553d;
-    color: #fff;
-    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Section styling (home section) */
@@ -1026,6 +987,10 @@ p {
     opacity: 1; /* Title appears on hover */
 }
 
+
+
+
+
 /* For small devices (320px and up) */
 @media (max-width: 425px) {
     body {
@@ -1046,14 +1011,14 @@ p {
     }
 
     .hamburg {
-        display: block;
+        display: flex;
         color: white;
         font-size: 2rem;
         cursor: pointer;
     }
 
     .links {
-        display: none; /* Hide normal navigation */
+        display: block; /* Hide normal navigation */
     }
 
     .dropdown {
@@ -1091,7 +1056,7 @@ p {
     }
 
     #home h1 {
-        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-size: clamp(1.3rem, 2.5vw, 2rem);
     }
 
     #home p {
@@ -1100,7 +1065,7 @@ p {
 
     .btn button {
         width: 80%;
-        font-size: 1rem;
+        font-size: -0.8rem;
     }
 
     .hobbies-container {
@@ -1114,7 +1079,7 @@ p {
         width: 100%;
         height: auto;
     }
-
+    
     .hobby p {
         text-align: center;
         font-size: 0.9rem;
@@ -1142,20 +1107,6 @@ p {
     }
 }
 
-/* Medium Devices (375px) */
-@media (min-width: 376px) and (max-width: 425px) {
-    .hobbies-container,
-    .skills-grid,
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hobby img,
-    .skill-card,
-    .project-card {
-        width: auto;
-    }
-}
 
 /* Adjustments for Larger Mobile Devices */
 @media (min-width: 426px) and (max-width: 768px) {
