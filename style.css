@@ -1029,7 +1029,7 @@ p {
 
     /* Make links smaller */
     .nav-container .links a {
-        font-size: 12px; /* Reduce font size */
+        font-size: 9px; /* Reduce font size */
         padding: 5px 8px; /* Smaller padding */
         color: white;
         display: inline-block;
@@ -1100,19 +1100,19 @@ p {
     .content h1 {
         font-size: 1.5rem; /* Smaller font size */
         line-height: 1.2;
-        margin-bottom: 0px;
+        
     }
     #home h1 {
         font-size: 18rem; /* Set a smaller font size */
         margin-top: 0; /* Remove top margin */
         margin-bottom: 10px; /* Optional: Adjust bottom margin */
-        padding: 0; /* Remove padding if any */
+        padding: 0px; /* Remove padding if any */
     }
     /* H2 (name) size adjustment */
     h2 span {
         font-size: 2.5rem; /* Adjusted font size */
         letter-spacing: 1px;
-        margin-top: 0; /* Remove top margin */
+        margin-top: 0px; /* Remove top margin */
         margin-bottom: 5px; /* Reduced bottom margin */
         padding: 0; /* Remove padding */
     }
@@ -1208,7 +1208,7 @@ p {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        padding: 0 10px;
+        padding: 10px 10px;
     }
 
     .hobby img {
@@ -1234,6 +1234,7 @@ p {
     
     .skills-heading {
         margin-top: 300px;
+        padding-top: 400px;
         font-size: 3rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -1266,9 +1267,9 @@ p {
         font-weight: bold;
         text-transform: uppercase;
         font-size: 3rem;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         text-align: center; /* Ensure the title is centered */
-        margin-top: 300px; /* Removes any extra margin above */
+        margin-top: 330px; /* Removes any extra margin above */
     }
     
     #contact {
@@ -1328,6 +1329,38 @@ p {
         padding: 12px 25px; /* Smaller button padding */
         font-size: 0.9rem; /* Smaller button text */
     }
+    .profile-image img {
+        width: 80%;  /* Increase width to 80% of the container */
+        max-width: 350px;  /* Limit max width to 350px */
+        height: auto;  /* Maintain aspect ratio */
+        border-radius: 50%;  /* Circular image */
+        object-fit: cover;   /* Make sure the image fits nicely */
+        margin-top: 200px;
+          /* Add space on top */
+    }
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-color: #052d24;
+    }
+
+    /* About container */
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-top: -1700px;
+    }
+
     @media (max-width: 375px) {
         .nav-container .links a {
             font-size: 11px; /* Further reduce font size for 375px */
@@ -1366,7 +1399,37 @@ p {
         scroll-snap-align: start;
         overflow-y: auto; /* Allow vertical scrolling within each section */
     }
+    .profile-image img {
+        width: 80%;  /* Increase width to 80% of the container */
+        max-width: 350px;  /* Limit max width to 350px */
+        height: auto;  /* Maintain aspect ratio */
+        border-radius: 50%;  /* Circular image */
+        object-fit: cover;   /* Make sure the image fits nicely */
+        margin-top: 200px;
+          /* Add space on top */
+    }
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-color: #052d24;
+    }
 
+    /* About container */
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-top: -1700px;
+    }
     /* Home section adjustments */
     #home {
         display: flex;
