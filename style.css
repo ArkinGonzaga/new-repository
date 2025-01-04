@@ -1105,14 +1105,14 @@ p {
     #home h1 {
         font-size: 18rem; /* Set a smaller font size */
         margin-top: 0; /* Remove top margin */
-        margin-bottom: 10px; /* Optional: Adjust bottom margin */
-        padding: 0px; /* Remove padding if any */
+        margin-bottom: px; /* Optional: Adjust bottom margin */
+        padding: -100px; /* Remove padding if any */
     }
     /* H2 (name) size adjustment */
     h2 span {
         font-size: 2.5rem; /* Adjusted font size */
         letter-spacing: 1px;
-        margin-top: 0px; /* Remove top margin */
+        margin-top: -100px; /* Remove top margin */
         margin-bottom: 5px; /* Reduced bottom margin */
         padding: 0; /* Remove padding */
     }
@@ -1203,7 +1203,32 @@ p {
         object-fit: cover;   /* Make sure the image fits nicely */
         margin-top: 300px;  /* Add space on top */
     }
-
+    #hobbies {
+        padding: 20px 20px;
+        background-color: #052d24;
+        text-align: center;
+        color: #ffffff;
+        position: relative; /* To allow absolute positioning of the title */
+    }
+    
+    /* Title Styling */
+    #hobbies h2 {
+        font-family: 'Playfair Display', serif; /* Replace Audrey with Playfair */
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-bottom: 10px;
+        margin-top: 67px;
+        margin-bottom: 1000px;
+        position: absolute; /* Position the title absolutely */
+        top: 0; /* Move the title to the top */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        margin-bottom: 0px; /* Space between title and content below */
+    }
+    
     .hobbies-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1233,8 +1258,8 @@ p {
     }
     
     .skills-heading {
-        margin-top: 300px;
-        padding-top: 400px;
+        margin-top: 200px;
+        padding-top: 370px;
         font-size: 3rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -1273,7 +1298,8 @@ p {
     }
     
     #contact {
-        padding: 0px 15px; /* Reduce padding for smaller screens */
+        margin-top: -0px;
+        padding: -100px 15px; /* Reduce padding for smaller screens */
         max-height: 100vh; /* Ensure it's still scrollable */
         overflow-y: auto; /* Enable vertical scroll */
     }
